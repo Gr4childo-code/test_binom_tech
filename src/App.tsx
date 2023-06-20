@@ -30,6 +30,8 @@ const App = () => {
       );
     }
   };
+  const formatter = new Intl.NumberFormat('ru');
+
   return (
     <div className='container'>
       <h1>BinomTech Test</h1>
@@ -47,15 +49,24 @@ const App = () => {
         <div className='infoChart__fact'>
           ФАКТ / ПЛАН (НА ТЕКУЩУЮ ДАТУ)
           <div className='infoChart__number'>
-            <span className='infoChart__first'>{data.datasets[0].data[0]}</span>
-            <span className='infoChart__second'> / {data.datasets[0].data[0]}</span>
+            <span className='infoChart__first'>
+              {' '}
+              {formatter.format(data.datasets[0].data[0])} т{' '}
+            </span>
+            <span className='infoChart__second'>
+              {' '}
+              / {formatter.format(data.datasets[0].data[0])} т
+            </span>
           </div>
         </div>
         <div className='infoChart__pilot'>
           ФАКТ / ПЛАН (НА ТЕКУЩУЮ ДАТУ)
           <div className='infoChart__number'>
-            <span className='infoChart__first'>{data.datasets[0].data[0]}</span>
-            <span className='infoChart__second'> / {data.datasets[0].data[0]}</span>
+            <span className='infoChart__first'>{formatter.format(data.datasets[0].data[1])} т</span>
+            <span className='infoChart__second'>
+              {' '}
+              / {formatter.format(data.datasets[0].data[1])} т
+            </span>
           </div>
         </div>
       </div>
