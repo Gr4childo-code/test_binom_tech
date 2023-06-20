@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,600;0,700;1,600&display=swap');
+#root {
+  max-width: 1440px;
+  height: 100%;
+}
+p {
+  margin: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.chart {
+  width: 150px;
+  height: 50%;
+  padding: 40px;
+  border-radius: 50%;
+  border: 10px solid rgb(252, 181, 59);
+}
+.infoChart {
+  height: 300px;
+  padding: 20px;
+  top: 180px;
+  left: 160px;
+  position: absolute;
+  background-color: #ffff;
+  color: rgb(139, 139, 139);
+}
+.infoChart__fact {
+  padding-bottom: 10px;
+}
+
+.infoChart__first,
+.infoChart__second {
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+}
+.infoChart__first {
+  margin-bottom: 10px;
+  color: rgb(252, 181, 59);
+}
+.infoChart__second {
+  font-family: 'Rubik', sans-serif;
+
+  color: rgb(80, 80, 80);
+}
